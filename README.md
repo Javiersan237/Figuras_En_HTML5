@@ -42,8 +42,6 @@ El flujo de renderizado sigue el pipeline clásico de graficación:
 | Prisma triangular          |    6     |    9    | Dos triángulos equiláteros unidos por aristas verticales |
 | Octaedro                   |    6     |   12    | Dos pirámides unidas por su base, alineado a los ejes    |
 
-Cada primitiva se selecciona desde un <select> en el panel lateral.
-
 ### Parte 2 — Pipeline de transformaciones
 
 - Traslación (Tx, Ty, Tz) — deslizadores de -200 a 200.
