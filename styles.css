@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Paleta personalizada: violeta / cian / amarillo
+   ========================================================================== */
+:root {
+    --violeta: #a855f7;
+    --cian: #22d3ee;
+    --amarillo: #facc15;
+    --fondo-pagina: #0d0b1e;
+    --fondo-panel: #1a1535;
+    --borde-panel: #3b2f6b;
+    --texto: #f8fafc;
+    --texto-suave: #cbd5e1;
+}
+
+/* Configuración general del lienzo y página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo-pagina);
+    color: var(--texto);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+}
+
+#canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    background-color: var(--fondo-panel);
+    border: 2px solid var(--cian);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 18px rgba(34, 211, 238, 0.15);
+    max-width: 100%;
+}
+
+/* Panel de control flotante */
+.panel {
+    background-color: var(--fondo-panel);
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--borde-panel);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--violeta);
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: #f1f5f9;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    border-bottom: 1px solid var(--borde-panel);
+    padding-bottom: 3px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=range] {
+    width: 100%;
+    margin-top: 4px;
+    accent-color: var(--violeta);
+}
+
+.val {
+    color: var(--cian);
+    font-weight: bold;
+}
+
+/* Selector de primitiva */
+select {
+    margin-top: 6px;
+    padding: 8px 10px;
+    background-color: var(--fondo-pagina);
+    color: var(--texto);
+    border: 1px solid var(--violeta);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: 2px solid var(--cian);
+    outline-offset: 1px;
+}
+
+/* Bloque informativo bajo el selector */
+.info {
+    margin: 8px 0 0 0;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    line-height: 1.5;
+}
+
+#infoPrimitiva {
+    color: var(--amarillo);
+    font-weight: bold;
+}
+
+/* Botón de auto-rotación */
+.btn {
+    padding: 10px 12px;
+    background-color: var(--violeta);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #9333ea;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Estado activo: auto-rotación en marcha */
+.btn.activo {
+    background-color: var(--amarillo);
+    color: #1a1535;
+}
+
+.btn.activo:hover {
+    background-color: #eab308;
+}
